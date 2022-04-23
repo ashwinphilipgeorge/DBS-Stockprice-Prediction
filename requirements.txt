@@ -1,3 +1,4 @@
 joblib
 pandas
 pickle5
+sklearn
