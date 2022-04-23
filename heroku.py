@@ -39,8 +39,10 @@ def predictor(model,value):
     prediction = model.predict([[value]])
     return prediction
 
-value = predictor(model,dbs_value)
-st.write('The DBS Shareprice is expected to be: $' + str(round(value[0][0],2)) + ' at this SGD value')
+if st.button('Predict'):
+    value = predictor(model,dbs_value)
+    st.write('The DBS Shareprice is expected to be: $' + str(round(value[0][0],2)) + ' at this SGD value')
+
     
 
     
